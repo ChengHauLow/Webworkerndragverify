@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/assets/styles/style.min.css">
+    <title>Timer</title>
+    <style>
+        *{
+            margin: 0; padding: 0;box-sizing: border-box;
+        }
+        body{display: flex;justify-content: center;align-items: center;min-height: 100vh;background-color: #f5f5f5;}
+    </style>
+</head>
+<body>
+    <h1>Time Now: <span id="timeNow"></span></h1>
+    <div class="verify">
+        <div id="verifyDragWrap" class="inputWrap">
+            <input type="range" value="0" id="rangeItem">
+            <div id="arrowDrag" class="overlay">
+                <img src="/public/img/arrowRight.png" alt="arrowRight" width="32px">
+            </div>
+            <span id="dragText">向右滑动滑块完成验证</span>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web-workers@0.9.1/dist/umd/index.min.js"></script>
+    <script src="/worker.js"></script>
+    <script src="/main.js"></script>
+</body>
+</html>
